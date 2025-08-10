@@ -48,7 +48,7 @@ typedef struct
     u8 bit6 : 1;
     u8 bit5 : 1;
     u8 bit4 : 1;
-    u8 bit3 : 1;
+    u8 bit3 : 1 <name = "Prevent Knockdown (bit 3)", comment = "Critical Hits, Technical Hits and Weakness Hits will not down the enemy" >;
     u8 hidingstatus2 : 1 <name = "Hiding the status(bit 2)", comment = "Enemies status can be hidden similar to boss. This is used on Boss">;
     u8 infiniteSP : 1 <name = "Infinite SP (bit 1)", comment = "Enemies will be able to use any skill regardless of SP pool">;
     u8 bit0 : 1;
@@ -84,7 +84,7 @@ typedef struct
     u8 bit6 : 1;
     u8 bit5 : 1;
     u8 bit4 : 1;
-    u8 bit3 : 1;
+    u8 bit3 : 1 <name = "Prevent Knockdown (bit 3)", comment = "Critical Hits, Technical Hits and Weakness Hits will not down the enemy" >;
     u8 hidestatsboss : 1 <name = "Hide stats/No disappearing when defeated (bit 2)", comment = "Status screen hides skills/stats. Used for bosses, loads special name graphic if the enemy has one (this is hardcoded to their ID).">;
     u8 infiniteSP : 1 <name = "Infinite SP (bit 1)", comment = "Enemies will be able to use any skill regardless of SP pool">;
     u8 bit0 : 1;
@@ -108,7 +108,7 @@ typedef struct
     u8 bit18 : 1;
     u8 bit17 : 1;
     u8 bit16 : 1;
-    u8 PreventKnockdown : 1 <name = "Prevent Knockdown (bit 15)", comment = "Enemy can never get knockdown 100% by Critical but not WEAK">;
+    u8 PreventKnockdown : 1 <name = "No Critical (bit 15)", comment = "Completely blocks Critical Hits against enemies if this flag is enabled">;
     u8 PositionHack : 1 <name = "Position Hack (bit 14)", comment = "Triggers Position Hack when you enter the battle">;
     u8 NoHoldUp : 1 <name = "No Hold Up (bit 13)", comment = "Hold up after downing all enemies will not trigger">;
     u8 shadownotdisappearinbattle : 1 <name = "Not Disappear in Battle (bit 12)", comment = "When the shadow HP reaches 0, it will not disperse if this is turned ON in ENCOUNT.TBL Flag">;
@@ -120,7 +120,7 @@ typedef struct
     u8 bit6 : 1;
     u8 loadbattlescript2 : 1 <name = "BFL Battle script load (bit 5)", comment = "This will load the battle script including Battle Formation for this particular battle (CAUTION: Will cause freeze if the battle script file is not exist)">;
     u8 EnemyFirstAct : 1 <name = "Enemy First Act (bit 4)", comment = "This will cause all enemies to act first turn as if party got ambushed. (Whether it must be scripted or random encounter is still unknown.">;
-    u8 NoCritical : 1 <name = "No Critical (bit 3)", comment = "Even if you have a skill with 100% Critical, it will never trigger critical if this is ON">;
+    u8 NoCritical : 1 <name = "??? (bit 3)", comment = "Was thought to be No Critical, doesnt appear to do anything">;
     u8 bit2 : 1;
     u8 bit1 : 1;
     u8 NoEscape : 1 <name = "No Escape (bit 0)", comment = "This will make your battle unescapable if it is ON">;
